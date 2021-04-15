@@ -123,6 +123,18 @@ h3{
   outline: none;
 }
 
+.errorMessage{
+  color: red;
+  border: 1px solid red;
+  border-radius: 5px;
+}
+
+.successMessage{
+  color: #46A16E;
+  border: 1px solid #46A16E;
+  border-radius: 5px;
+}
+
 .footer{
   display: block;
   position: fixed;
