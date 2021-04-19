@@ -4,6 +4,7 @@ import {AiFillDollarCircle, AiFillInfoCircle, AiFillBook} from 'react-icons/ai';
 import banner from "../images/Bottom-Banner2.jpg";
 import logo from "../images/mutualism-logo-white-no-text.svg";
 import izandlaZiyagezana from "../images/IzandlaGraphic-black-bg.svg";
+import { Redirect } from "react-router-dom";
 
 
 export default function Content() {

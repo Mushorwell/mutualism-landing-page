@@ -125,14 +125,13 @@ h3{
 
 .errorMessage{
   color: red;
-  border: 1px solid red;
-  border-radius: 5px;
 }
 
 .successMessage{
   color: #46A16E;
   border: 1px solid #46A16E;
   border-radius: 5px;
+  padding: 15px;
 }
 
 .footer{
@@ -153,6 +152,19 @@ h3{
 
 .banner{
   width: 100%;
+}
+
+.link{
+  background: #46A16E;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.link:hover{
+  background: black;
+  border: #46A16E 2px solid;
 }
 
 @media(min-height: 900px){

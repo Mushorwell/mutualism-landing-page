@@ -153,23 +153,37 @@ export default function Register(){
                 },
                 body: `email=${signUpDetails.email.trim()}&name=${signUpDetails.fName.trim()}&last_name=${signUpDetails.lName.trim()}`
             }
-            console.log(options.body);
+            // console.log(options.body);
             //API fetch method for mailchimp
             fetch(apiUrl, options)
-                .then(res =>res.json())
+                .then(res => {
+                    if(!res.ok){
+                        throw new Error(res.status);
+                    }
+                    return res.json();
+                })
                 .then(re=>{
                     setSubmissionComplete(true);
                     setSubmissionError("");
                     message = "Thank you for your details, we'll be in touch.";
                     resetForm();
-                    setFormStatus(<div className="successMessage" role="alert">{message}</div>);
-
+                    setFormStatus(<div className="successMessage" style={{borderRadius:"5px",padding:"15px",border:"1px solid #46A16E"}} role="alert">{message}</div>);
+                    document.location='thank_you';
                     // console.log(re);
                 })
                 .catch(err => {
-                    setSubmissionError(err.message);
-                    message = "Unsuccessful, please try again later. If the error persists contact site admin."
-                    setFormStatus(<div className="errorMessage" role="alert">{message}</div>);
+                    console.log(err);
+                    if (err.message === "500"){
+                        // setSubmissionError(err);
+                        message = "Email already submitted."
+                        setSubmissionError(err);
+                        setFormStatus(<div className="errorMessage" style={{borderRadius:"5px",padding:"15px",border:"1px solid red"}} role="alert">{message}</div>);
+                    }else{
+                        message = "Unsuccessful, please try again later. If the error persists contact site admin."
+                        setSubmissionError(err);
+                        setFormStatus(<div className="errorMessage" style={{borderRadius:"5px",padding:"15px",border:"1px solid red"}} role="alert">{message}</div>);
+                    }
+
                 });
         }
     };
