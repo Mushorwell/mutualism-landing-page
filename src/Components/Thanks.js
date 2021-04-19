@@ -1,6 +1,5 @@
 import logo from "../images/mutualism-logo-white-no-text.svg";
 import banner from "../images/Bottom-Banner2.jpg";
-import video from "../video/play.mp4";
 
 export default function Thanks() {
     return(

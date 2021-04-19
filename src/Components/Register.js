@@ -1,7 +1,6 @@
 import React,{useState, useEffect} from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import Loader from 'react-loader-spinner';
-import { IoIosArrowRoundForward } from "react-icons/io";
 
 export default function Register(){
     const [signUpDetails, setSignUpDetails] = useState({
