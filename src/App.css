@@ -156,7 +156,6 @@ h3{
   width: 100%;
 }
 
-<<<<<<< HEAD
 .link{
   background: #46A16E;
   color: white;
@@ -169,9 +168,6 @@ h3{
   background: black;
   border: #46A16E 2px solid;
 }
-=======
-
->>>>>>> 6107e5b8f1c33762e7536c1131a6a4810400ac8c
 
 @media(min-height: 900px){
   .mainbody{

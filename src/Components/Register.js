@@ -135,12 +135,13 @@ export default function Register(){
         e.preventDefault();
         loading();
         let message;
-        if ((errors.fNameErr!=='') || (errors.lNameErr!=='') || (errors.emailErr!=='')) {
+        if ((errors.fNameErr!=='') || (errors.lNameErr!=='') || (errors.emailErr!=='') || (signUpDetails.lName==='') || (signUpDetails.fName==='') ||
+            (signUpDetails.email==='') || signUpDetails.confirmEmail==='') {
             // setFormValid(false);
             setSubmissionComplete(false);
             message = "Please fill in all the fields and make sure your email matches.";
             // setSubmissionError(message);
-            setFormStatus(<div className="errorMessage" role="alert">{message}</div>);
+            setFormStatus(<div className="errorMessage" style={{borderRadius:"5px",padding:"15px",border:"1px solid red"}} role="alert">{message}</div>);
             // console.log(message);
         }else{
             //Configurations
