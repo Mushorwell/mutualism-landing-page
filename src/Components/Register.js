@@ -168,7 +168,7 @@ export default function Register(){
                     message = "Thank you for your details, we'll be in touch.";
                     resetForm();
                     setFormStatus(<div className="successMessage" style={{borderRadius:"5px",padding:"15px",border:"1px solid #46A16E"}} role="alert">{message}</div>);
-                    document.location='thank_you';
+                    document.location='/mailinglist/#/thank_you';
                     // console.log(re);
                 })
                 .catch(err => {
